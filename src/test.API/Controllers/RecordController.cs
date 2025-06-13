@@ -6,7 +6,7 @@ using test.API.Services;
 namespace test.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/languages")]
 public class RecordController:ControllerBase
 {
     private readonly IRecordService _recordService;

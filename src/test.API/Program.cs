@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using test.API.Data;
 using test.API.Models;
+using test.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IRecordService, RecordService>();
 
 
 builder.Services.AddDbContext<RecordDbContext>(options =>
